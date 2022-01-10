@@ -1,0 +1,16 @@
+{
+  "output_dir": "rnaseq_out", 
+  "genome_sequence": "prequisite/MS2/MS2.fna", 
+  "genome_annotation": "prequisite/MS2/MS2.gff", 
+  "reads_data": [
+      ["S5075", "X101SC20101622-Z02-J018/1.rawdata/5075_BRRP210009727-1A/5075_BRRP210009727-1A_1.fq.gz", "X101SC20101622-Z02-J018/1.rawdata/5075_BRRP210009727-1A/5075_BRRP210009727-1A_2.fq.gz"], 
+      ["AC", "X101SC20101622-Z02-J018/1.rawdata/AC_BRRP210009729-1A/AC_BRRP210009729-1A_1.fq.gz", "X101SC20101622-Z02-J018/1.rawdata/AC_BRRP210009729-1A/AC_BRRP210009729-1A_2.fq.gz"], 
+      ["DYR", "X101SC20101622-Z02-J018/1.rawdata/DYR_BRRP210009726-1A/DYR_BRRP210009726-1A_1.fq.gz", "X101SC20101622-Z02-J018/1.rawdata/DYR_BRRP210009726-1A/DYR_BRRP210009726-1A_2.fq.gz"], 
+      ["pecS", "X101SC20101622-Z02-J018/1.rawdata/pecS_BRRP210009728-1A/pecS_BRRP210009728-1A_1.fq.gz", "X101SC20101622-Z02-J018/1.rawdata/pecS_BRRP210009728-1A/pecS_BRRP210009728-1A_2.fq.gz"]
+  ],
+  "comparisons": [
+      ["S5075", "DYR"], 
+      ["AC", "DYR"], 
+      ["pecS", "DYR"]
+  ]
+}
