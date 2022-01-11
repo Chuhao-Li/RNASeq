@@ -1,23 +1,23 @@
 {
-  "output_dir": "./", 
-  "genome_sequence": "../../prequisite/MS2/MS2.fna", 
-  "genome_annotation": "../../prequisite/MS2/MS2.gff", 
+  "output_dir": "/path/to/output_directory", 
+  "genome_sequence": "path/to/genome_sequence.fna", 
+  "genome_annotation": "path/to/genome_annotation.gff", 
   "reads_data": [
-      ["AC", "/home/lch/Project/2022-01-05_huming_RNASeq/X101SC20101622-Z02-J018/1.rawdata/AC_BRRP210009729-1A/AC_BRRP210009729-1A_1.fq.gz", "/home/lch/Project/2022-01-05_huming_RNASeq/X101SC20101622-Z02-J018/1.rawdata/AC_BRRP210009729-1A/AC_BRRP210009729-1A_2.fq.gz"], 
-      ["AC_last", "/home/lch/Project/huming/2020-12-18_speAC_RNASeq/raw_data/2.cleandata/AC_BRRP200007001-1A/AC_BRRP200007001-1A_1.clean.fq.gz", "/home/lch/Project/huming/2020-12-18_speAC_RNASeq/raw_data/2.cleandata/AC_BRRP200007001-1A/AC_BRRP200007001-1A_2.clean.fq.gz"],
-      ["MS2_last", "/home/lch/Project/huming/2020-12-18_speAC_RNASeq/raw_data/2.cleandata/MS2_BRRP200007000-1A/MS2_BRRP200007000-1A_1.clean.fq.gz", "/home/lch/Project/huming/2020-12-18_speAC_RNASeq/raw_data/2.cleandata/MS2_BRRP200007000-1A/MS2_BRRP200007000-1A_2.clean.fq.gz"],
-      ["DYR", "/home/lch/Project/2022-01-05_huming_RNASeq/X101SC20101622-Z02-J018/1.rawdata/DYR_BRRP210009726-1A/DYR_BRRP210009726-1A_1.fq.gz", "/home/lch/Project/2022-01-05_huming_RNASeq/X101SC20101622-Z02-J018/1.rawdata/DYR_BRRP210009726-1A/DYR_BRRP210009726-1A_2.fq.gz"]
+      ["X-1", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"], 
+      ["CK-1", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"], 
+      ["CK-2", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"], 
+      ["X-2", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"]
   ],
   "comparisons": [
-      ["AC", "DYR"], 
-      ["AC_last", "MS2_last"]
+      ["X-1", "CK-1"], 
+      ["X-2", "CK-2"]
   ],
-  "batch": {"AC": 2, "AC_last": 1, "MS2_last": 1, "DYR": 2}, 
+  "batch": {"X-2": 2, "CK-1": 1, "X-1": 1, "CK-2": 2}, 
   "design": {
-      "delta_AC": ["AC", "AC_last"], 
-      "wild_type": ["MS2_last", "DYR"]
+      "X": ["X-1", "X-2"], 
+      "CK": ["CK-1", "CK-2"]
   }, 
   "contrast": [
-      ["delta_AC", "wild_type"]
+      ["X", "CK"]
   ]
 }

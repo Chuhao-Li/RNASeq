@@ -155,7 +155,8 @@ if "design" in config and not args.no_deseq:
         for k,v in config["design"].items(): # k: condition name | v: list of sample
             for i in v: # i: sample name
                 print("{i},{k},{b}".format(i=i, k=k, b=config["batch"][i]), file=f)
-    os.system("Rscript {}/DESeq.r".format(script_base))
+    contrasts = " ".join(['_vs_'.join(i) for i in config['contrast']])
+    os.system("Rscript {}/DESeq.r {}".format(script_base, contrasts))
 
 if "comparisons" in config and not args.no_gfold:
     # 无重复
