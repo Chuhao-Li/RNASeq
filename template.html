@@ -1,0 +1,93 @@
+<html>
+<head>
+<script src="https://seyx.top/static/blog/js/jquery.min.js"></script>
+<style>
+.figure {
+    border: 5px solid #d5d5d5;
+    padding: 20px 10px;
+    max-width: 100%;
+    margin-bottom: 24px;
+    clear: both;
+}
+.table {
+    border: 5px solid #d5d5d5;
+    padding: 20px 10px;
+    max-width: 100%;
+    margin-bottom: 24px;
+    clear: both;
+}
+.fig_caption {
+    margin-bottom: 8px;
+    display: block;
+    word-break: break-word;
+}
+.fig_description{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+img {
+    max-width: 100%; 
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+.article-body {
+    margin-bottom: 300px;
+    max-width: 80%; 
+}
+button {
+    float:right
+}
+
+pre {
+background-color: EBECE4; 
+}
+
+</style>
+</head>
+<body>
+<nav class="article-toc"></nav>
+
+<h1 class="card-title">细菌转录组数据分析</h1>
+<div class="article-body"></div>
+
+<script>
+// 自动生成导航
+generate_toc = function(){
+    var headers = $(".article-body :header");
+    toc = Array()
+    toc.push("<ul>")
+    var last_level = 1
+    headers.each(function(index, header){
+        console.log("this header: ", header);
+        level = Number(header.nodeName[1]);
+        Id = "header_" + index;
+        content = header.innerHTML;
+        console.log("header level: ", level)
+        header.setAttribute("id", Id)
+        if (index == 0){
+            toc.push('<li><a href="#' + Id + '">' + content + '</a>')
+        }
+        else if(level == last_level){
+            toc.push('</li><li><a href="#' + Id + '">' + content + '</a>')
+        }
+        else if(level > last_level){
+            toc.push('</li><ul><li><a href="#' + Id + '">' + content + '</a>')
+        }
+        else if (level < last_level){
+            toc.push("</li></ul>".repeat(last_level-level) + '<li><a href="#' + Id + '">' + content + '</a>')
+        }
+        last_level = level
+    })
+    toc.push("</li></ul>".repeat(level))
+    toc = toc.join("");
+    $(".article-toc").html(toc);
+}
+$(generate_toc());
+
+</script>
+</body>
+</html>

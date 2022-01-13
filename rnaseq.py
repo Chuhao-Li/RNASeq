@@ -95,7 +95,7 @@ parser.add_argument("-v", "--version", action="store_true", help="print pipeline
 args = parser.parse_args()
 
 if args.version:
-    print("rnaseq v0.1")
+    print("rnaseq v0.2.1")
     exit()
 
 config_file = args.config

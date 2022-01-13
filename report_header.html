@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		html {
+		    font-family: sans-serif;
+		    -ms-text-size-adjust: 100%;
+		    -webkit-text-size-adjust: 100%;
+		}
+		 
+		body {
+		    margin: 10px;
+		}
+		table {
+		    border-collapse: collapse;
+		    border-spacing: 0;
+		}
+		 
+		td,th {
+		    padding: 0;
+		}
+		 
+		.pure-table {
+		    border-collapse: collapse;
+		    border-spacing: 0;
+		    empty-cells: show;
+		    border: 1px solid #cbcbcb;
+		}
+		 
+		.pure-table caption {
+		    color: #000;
+		    font: italic 85%/1 arial,sans-serif;
+		    padding: 1em 0;
+		    text-align: center;
+		}
+		 
+		.pure-table td,.pure-table th {
+		    border-left: 1px solid #cbcbcb;
+		    border-width: 0 0 0 1px;
+		    font-size: 85%;
+		    margin: 0;
+		    overflow-x: scroll;
+		    overflow-y: auto;
+		    padding: .5em 1em;
+                    white-space: nowrap;
+		}
+		 
+		.pure-table thead {
+		    background-color: #e0e0e0;
+		    color: #000;
+		    text-align: left;
+		    vertical-align: bottom;
+		}
+		 
+		.pure-table td {
+		    background-color: transparent;
+		}
+		 
+		.pure-table-bordered td {
+		    border-bottom: 1px solid #cbcbcb;
+		}
+		 
+		.pure-table-bordered tbody>tr:last-child>td {
+		    border-bottom-width: 0;
+		}
+                /*TOC样式*/
+		ul.verticalnav {
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+		}
+		.verticalnav {
+		    position: fixed; 
+		    width: 120px;
+		
+		}
+		.verticalnav a {
+		    display: block;
+		    height: 32px;
+		    line-height: 32px;
+		    text-align: center;
+		    color: #666;
+		    font-size: 15px;
+		    text-decoration: none;
+		}
+		
+		.verticalnav li a:hover,     
+		.verticalnav li a:focus {
+		    color: #ff5f3e;
+		}
+		.verticalnav li a.current {
+		    color: #ff5f3e;
+		    border-left: 4px solid #ff5f3e;
+		}
+
+                /*表格宽度设置*/
+                /*SV*/
+                #sv_report th.chromosome {
+                    width: 10%;
+                }
+                #sv_report th.start, #sv_report th.end, #sv_report th.length, #sv_report th.sv_type{
+                    width: 10%;
+                }
+                #sv_report th.others {
+                    width: 40%; 
+                }
+                #sv_report th.detail {
+                    width:10%;
+                }
+                /*SNV*/
+                #snv_report th.chromosome {
+                    width: 10%;
+                }
+                #snv_report th.position {
+                    width: 10%;
+                }
+                #snv_report th.annotation {
+                    width: 40%; 
+                }
+                th.detail {
+                    width:10%;
+                }
+                th.REF, th.ALT {
+                    width:5%;
+                }
+                th.sample {
+                    width:10%
+                }
+                /*scrollbar设置*/
+                ::-webkit-scrollbar {
+                    width: 10px;
+                    height: 0px;
+                }
+                /* Handle */
+                ::-webkit-scrollbar-thumb {
+                    background: grey;
+                    border-radius: 5px;
+                }
+		</style>
+	</head>

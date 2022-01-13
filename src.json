@@ -1,0 +1,38 @@
+{
+"figure": {
+    "f1": {
+        "path": "featureCounts/Description_of_read_alignment.png",
+        "desc": "", 
+        "title": ""
+    },
+    "f2": {
+        "path": "DESeq/pall.png",
+        "desc": "",
+        "title": ""
+    }
+},
+
+"data": {
+    "d1": {
+        "path": "featureCounts/featureCounts.txt", 
+        "desc": "", 
+        "title": ""
+    },
+    "d2": {
+        "path": "gfold/AC_last_vs_MS2_last.anno.xls"
+    },
+    "d3": {
+        "path": "gfold/AC_vs_DYR.anno.xls"
+    },
+    "d4": {
+        "path": "DESeq/normalized_readCount.csv"
+    },
+    "d5": {
+        "path": "DESeq/delta_AC_vs_wild_type.csv"
+    }
+},
+
+"table": {
+}
+
+}
