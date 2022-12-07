@@ -82,14 +82,14 @@ Here is an example conf.json file:
 
 ```
 
-**Mandatory parameters: **
+**Mandatory parameters**: 
 
 - output_dir: output directoty. Result files will output to this directory. 
 - genome_sequence: path to genome sequence file in fasta format. 
 - genome_annotation: path to genome annotation file in gff format. Please ensure that the sequence ids in genome sequence file are the same as that in genome annotation file. Each CDS feature should contatin a `locus_tag` attribute. 
 - reads_data: One sample a line, the three columns represents [sample name, path to read1 NGS data, path to read2 NGS data]. Here, the sample name should be unique. 
 
-**Other parameters: **
+**Other parameters**: 
 
 Other parameters depends on your experiment design. In this example, we have 2 condition. Two repeat in each conditions. 
 For expriments that has repeat, you should provide the `design` and `contrast` parameters: 
