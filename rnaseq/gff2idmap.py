@@ -25,11 +25,15 @@ def locusID_to_refseqID(gff):
                 gene_name = gene_name.group()
             else:
                 gene_name = ''
-            locustag = re.search('(?<=locus_tag=)[^;]*', line[8]).group()
+            locustag = re.search('(?<=locus_tag=)[^;]*', line[8])
+            if locustag: 
+                locustag = locustag.group()
+            else:
+                locustag = ''
             result[geneid] = [gene_name, locustag]
             this_gene = geneid
             tag = 0 # 对于每个gene，只读取第一个CDS，获取其product等。
-        elif tag == 0:
+        elif tag == 0 and line[2] == "CDS":
             try:
                 parent = re.search('(?<=Parent=)[^;]*', line[8]).group()
             except(AttributeError):
@@ -42,7 +46,7 @@ def locusID_to_refseqID(gff):
                 product = re.search('(?<=product=)[^;]*', line[8]).group()
             except(AttributeError):
                 product = ''
-            if parent == this_gene:
+            if parent.startswith(this_gene):
                 result[geneid].append(Name)
                 result[geneid].append(product)
                 tag = 1

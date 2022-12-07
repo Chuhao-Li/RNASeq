@@ -10,6 +10,7 @@ output:
 当前只支持读取gfold比较结果。
 '''
 
+import sys
 import pandas as pd
 
 def read_gfold(path):
@@ -31,8 +32,10 @@ def get_gfold_down(data, gfold=-2, rpkm=10):
 # 2. get up or down regulated gene sets. 
 # 3. set operation
 
-table1 = "gfold/AC_last_vs_MS2_last.anno.xls"
-table2 = "gfold/AC_vs_DYR.anno.xls"
+# table1 = "gfold/AC_last_vs_MS2_last.anno.xls"
+# table2 = "gfold/AC_vs_DYR.anno.xls"
+table1 = sys.argv[1]
+table2 = sys.argv[2]
 
 table1 = read_gfold(table1)
 table2 = read_gfold(table2)

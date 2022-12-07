@@ -1,23 +1,18 @@
 {
-  "output_dir": "/path/to/output_directory", 
-  "genome_sequence": "path/to/genome_sequence.fna", 
-  "genome_annotation": "path/to/genome_annotation.gff", 
+  "output_dir": "./output/", 
+  "genome_sequence": "rnaseq_example/GCF_001891105.1_ASM189110v1_genomic.fna", 
+  "genome_annotation": "rnaseq_example/GCF_001891105.1_ASM189110v1_genomic.gff", 
   "reads_data": [
-      ["X-1", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"], 
-      ["CK-1", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"], 
-      ["CK-2", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"], 
-      ["X-2", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"]
+      ["et1", "rnaseq_example/ewt_1_1.clean.fq.gz", "rnaseq_example/ewt_1_2.clean.fq.gz"], 
+      ["et2", "rnaseq_example/ewt_2_1.clean.fq.gz", "rnaseq_example/ewt_2_2.clean.fq.gz"], 
+      ["ex1", "rnaseq_example/ex_1_1.clean.fq.gz", "rnaseq_example/ex_1_2.clean.fq.gz"], 
+      ["ex2", "rnaseq_example/ex_2_1.clean.fq.gz", "rnaseq_example/ex_2_2.clean.fq.gz"]
   ],
-  "comparisons": [
-      ["X-1", "CK-1"], 
-      ["X-2", "CK-2"]
-  ],
-  "batch": {"X-2": 2, "CK-1": 1, "X-1": 1, "CK-2": 2}, 
   "design": {
-      "X": ["X-1", "X-2"], 
-      "CK": ["CK-1", "CK-2"]
+      "ex": ["ex1", "ex2"], 
+      "et": ["et1", "et2"]
   }, 
   "contrast": [
-      ["X", "CK"]
+      ["ex", "et"]
   ]
 }

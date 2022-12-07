@@ -1,0 +1,23 @@
+{
+  "output_dir": "/path/to/output_directory", 
+  "genome_sequence": "path/to/genome_sequence.fna", 
+  "genome_annotation": "path/to/genome_annotation.gff", 
+  "reads_data": [
+      ["X-1", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"], 
+      ["CK-1", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"], 
+      ["CK-2", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"], 
+      ["X-2", "/path/to/read1.fq.gz", "/path/to/read2.fq.gz"]
+  ],
+  "comparisons": [
+      ["X-1", "CK-1"], 
+      ["X-2", "CK-2"]
+  ],
+  "batch": {"X-2": 2, "CK-1": 1, "X-1": 1, "CK-2": 2}, 
+  "design": {
+      "X": ["X-1", "X-2"], 
+      "CK": ["CK-1", "CK-2"]
+  }, 
+  "contrast": [
+      ["X", "CK"]
+  ]
+}
